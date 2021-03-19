@@ -4,7 +4,7 @@ for /f "usebackq tokens=1* delims=: " %%i in (`"%ProgramFiles(x86)%\Microsoft Vi
 	if /i "%%i"=="installationPath" set InstallDir=%%j
 )
 
-set msbuild="%InstallDir%\MSBuild\15.0\Bin\MSBuild.exe"
+set msbuild="%InstallDir%\MSBuild\Current\Bin\MSBuild.exe"
 
 if not exist %msbuild% (
 	echo Failed to locate MSBuild 15
